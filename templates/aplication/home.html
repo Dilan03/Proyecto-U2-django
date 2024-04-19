@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% extends "aplication/base.html" %}
+{% load static %}
+{% block body_block %}
+
+<h1>DESTACADOS Y RECOMENDADOS</h1>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <div class="game-info">
+            <div class="game-image">
+                <img src="{% static 'images/supramayro.jpg' %}" alt="Imagen del juego">
+            </div>
+            <div class="game-details">
+                <h2>Supra Mayro Kratt</h2>
+                <p>Precio: $1299.99</p>
+                <p class="descuento">Precio con descuento: $1298.99</p>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="game-info">
+            <div class="game-image">
+                <img src="{% static 'images/cinconoshes.png' %}" alt="Imagen del juego">
+            </div>
+            <div class="game-details">
+                <h2>Turno Nocturno: OXXO</h2>
+                <p>Precio: $49.99</p>
+                <p class="descuento">Precio con descuento: $39.99</p>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="game-info">
+            <div class="game-image">
+                <img src="{% static 'images/watergame.png' %}" alt="Imagen del juego">
+            </div>
+            <div class="game-details">
+                <h2>Water Game Deluxe</h2>
+                <p>Precio: $79.99</p>
+                <p class="descuento">Precio con descuento: $69.99</p>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="game-info">
+            <div class="game-image">
+                <img src="{% static 'images/solin.png' %}" alt="Imagen del juego">
+            </div>
+            <div class="game-details">
+                <h2>Baraja española</h2>
+                <p>Precio: $123.99</p>
+                <p class="descuento">Precio con descuento: $124.99</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+<h1>Videojuegos de la categoría "{{ categoria.nombre }}"</h1>
+<br>
+<div class="container">
+  <div class="row">
+    {% for videojuego in videojuegos %}
+    <div class="col-md-4 caja">
+      <div class="card">
+          <img src="{% static 'images/videogame.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">{{ videojuego.titulo }}</h5>
+              <p class="card-text">Desarrollador: {{ videojuego.desarrollador }}</p>
+              <p class="card-text">Precio: ${{ videojuego.precio }}</p>
+          </div>
+      </div>
+    </div>
+    {% empty %}
+        <li>No hay videojuegos disponibles en esta categoría.</li>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

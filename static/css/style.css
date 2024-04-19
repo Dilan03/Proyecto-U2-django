@@ -1,0 +1,149 @@
+:root {
+    --color-primary: #F27E88;
+    --color-secondary: #F2949C;
+    --color-fondo: #F2D7B6;
+    --color-cafe: #BF7D65;
+    --color-grone: #0D0D0D;
+
+    --color-primary2: #171a21;
+    --color-secondary2: #4b5263;
+    --color-text: #c6d4df;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--color-fondo);
+}
+
+.navbar {
+    background-color: var(--color-cafe);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.logo {
+    display: flex;
+    color: white;
+    height: 50px;
+}
+
+.logo p {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: var(--color-grone);
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: var(--color-grone);
+    padding: 30px 0;
+    color: var(--color-text);
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+    color: #fff; /* Cambia el color al pasar el cursor sobre los enlaces */
+}
+
+.footer-social img {
+    width: 25px;
+    height: 25px;
+}
+
+.container {
+    width: 100%;
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+}
+
+.game-image {
+    width: 60%; /* Ocupa el 60% del espacio */
+    height: 376px;
+}
+
+.game-image img {
+    max-width: 100%; /* La imagen se ajustará al tamaño del contenedor */
+}
+
+.game-details {
+    width: 40%; /* Ocupa el 40% del espacio */
+    padding: 20px; /* Espacio entre la imagen y la información */
+    background-color: var(--color-secondary2);
+    height: 376px;
+    color:white;
+}
+
+.descuento {
+    background-color: greenyellow;
+    border: green solid 1px;
+    color: black;
+    font-size: 20px;
+}
+
+.caja {
+    padding-top: 20px;
+}
