@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "aplication/base.html" %}
+{% load static %}
+{% block body_block %}
+    <div>
+        <h1>Acerca de</h1>
+        <div style="display: flex; align-items: center;">
+            <img src="{% static 'images/MeatsLogo.png' %}" alt="Logo" class="logo_grandote">
+            <h2 style="margin-left: 1rem;">Meats®</h2>
+        </div>
+        <p>Meats es el mejor lugar para jugar, hablar sobre juegos y crearlos..</p>
+        <p>La aplicación fue desarrollada por el equipo de desarrollo de Meats alias ToyotaLegacy.</p>
+        <p>Esta es una aplicación web desarrollada con Django, un framework de desarrollo web en Python.</p>
+        <br>
+        <h2>Integrantes del equipo</h2>
+        <br>
+        <div style="display: flex; justify-content: space-around; ">
+            <div>
+                <img src="{% static 'images/dilan.png' %}" alt="Dilan" class="miembros">
+                <p style="text-align: center;" >Dilan03</p>
+            </div>
+            <div>
+                <img src="{% static 'images/elias.png' %}" alt="Elias" class="miembros">
+                <p style="text-align: center;">JESR555</p>
+            </div>
+            <div>
+                <img src="{% static 'images/isra.png' %}" alt="Israel" class="miembros">
+                <p style="text-align: center;" >IsraelChacon</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</html>

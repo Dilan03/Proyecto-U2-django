@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 {% extends "aplication/base.html" %}
 {% block body_block %}
-    <h1>Opiniones</h1>
-    <ul>
-        {% for opinion in opiniones %}
-            <li>
-                <strong>Nombre:</strong> {{ opinion.nombre }} <br>
-                <strong>Correo:</strong> {{ opinion.correo }} <br>
-                <strong>Opinión:</strong> {{ opinion.opinion }}
-            </li>
-        {% endfor %}
-    </ul>
+<h1>Opiniones</h1>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Opinión</th>
+    </tr>
+    {% for opinion in opiniones %}
+    <tr>
+        <td>{{ opinion.nombre }}</td>
+        <td>{{ opinion.correo }}</td>
+        <td>{{ opinion.opinion }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}

@@ -32,3 +32,6 @@ def registro(request):
 def mostrar_opiniones(request):
     opiniones = Opinion.objects.all()
     return render(request, "aplication/opiniones.html", {'opiniones': opiniones})
+
+def about(request):
+    return render(request, "aplication/about.html")

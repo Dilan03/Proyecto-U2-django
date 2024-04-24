@@ -147,3 +147,32 @@ body {
 .caja {
     padding-top: 20px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e6be8d;
+}
+
+.miembros {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+
+.logo_grandote {
+    width: 200px;
+    height: 200px;
+}
