@@ -30,6 +30,11 @@
         <li><a href="/registro/">Registro</a></li>
         <li><a href="/opiniones/">Opiniones</a></li>
         <li><a href="/about">Acerca de</a></li>
+        {% if request.user.is_authenticated %}
+            <li><a href="">Salir</a></li>
+        {% else %}
+        <li><a href={ url 'login' }>Ingresar</a></li>
+        {% endif %}
     </ul>
     <div class="search-bar">
         <input type="text" placeholder="Buscar juegos...">
