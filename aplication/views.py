@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from .models import Videojuego, Categoria, Opinion
 from . import forms
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 def home(request):
     categoria= Categoria.objects.get(nombre="question")
@@ -36,3 +37,7 @@ def about(request):
 def mostrar_opiniones(request):
     opiniones = Opinion.objects.all()
     return render(request, "aplication/opiniones.html", {'opiniones': opiniones})
+
+def exit(request):
+    logout(request)
+    return redirect('home')
