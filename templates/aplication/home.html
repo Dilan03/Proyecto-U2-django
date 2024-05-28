@@ -2,7 +2,10 @@
 {% extends "aplication/base.html" %}
 {% load static %}
 {% block body_block %}
-
+{% if request.user.is_authenticated %}
+  <h2>{{ user.username | upper }}, bienvenido a MAETS
+  </h2>
+{% endif %}
 <h1>DESTACADOS Y RECOMENDADOS</h1>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
