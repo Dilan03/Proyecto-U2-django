@@ -3,12 +3,17 @@ from .models import Videojuego, Categoria, Opinion
 from . import forms
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+from django.views.generic import TemplateView
 
-def home(request):
-    categoria= Categoria.objects.get(nombre="question")
-    categoria_id = categoria.id
-    videojuegos = Videojuego.objects.filter(categoria=categoria_id)
-    return render(request, "aplication/home.html", {'categoria': categoria, 'videojuegos': videojuegos})
+class HomeView(TemplateView):
+    template_name = "aplication/home.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        categoria = Categoria.objects.get(nombre="question")
+        context['categoria'] = categoria
+        context['videojuegos'] = Videojuego.objects.filter(categoria=categoria.id)
+        return context
 
 #Crear un formulario para mostrar
 def registro(request):
@@ -31,8 +36,9 @@ def registro(request):
 
     return render(request, "aplication/registro.html", {'form' : form})
 
-def about(request):
-    return render(request, "aplication/about.html")
+class AboutView(TemplateView):
+    template_name = "aplication/about.html"
+
 @login_required
 def mostrar_opiniones(request):
     opiniones = Opinion.objects.all()
