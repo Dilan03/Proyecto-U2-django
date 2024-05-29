@@ -14,6 +14,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: var(--color-fondo);
+    height: 100vh;
 }
 
 .navbar {
@@ -175,4 +176,86 @@ th {
 .logo_grandote {
     width: 200px;
     height: 200px;
+}
+
+.login h1{
+    color: #000;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.login button {
+    width: 219px;
+    height: 59px;
+    flex-shrink: 0;
+    margin: 20px;
+    padding: auto;
+}
+
+.login input {
+    width: 660px;
+    height: 80px;
+    flex-shrink: 0;
+    margin: 20px;
+    padding: auto;
+}
+
+.login form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 30px;
+}
+
+.opiniones h1{
+    color: #000;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.opiniones input{
+    width: 660px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.opiniones textarea{
+    width: 660px;
+    height: 320px;
+    flex-shrink: 0;
+}
+
+.opiniones {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 30px;
+}
+
+.opiniones form p{
+    display:flex;
+    flex-direction: column;
+}
+
+footer {
+    bottom: 0;
 }

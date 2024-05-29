@@ -33,7 +33,7 @@
         {% if request.user.is_authenticated %}
             <li><a href={% url 'exit' %}>Salir</a></li>
         {% else %}
-        <li><a href={% url 'login' % }>Ingresar</a></li>
+        <li><a href="/login.html">Ingresar</a></li>
         {% endif %}
     </ul>
     <div class="search-bar">
@@ -50,20 +50,20 @@
     <footer class="footer">
         <div class="footer-links">
             <ul>
-                <li><a href="#">Acerca de Valve</a></li>
-                <li><a href="#">Steamworks</a></li>
+                <li><a href="#">Acerca de Meats</a></li>
+                <li><a href="#">Meatsworks</a></li>
                 <li><a href="#">Empleo</a></li>
-                <li><a href="#">Distribución de Steam</a></li>
+                <li><a href="#">Distribución de Meats</a></li>
                 <li><a href="#">Tarjetas regalo</a></li>
-                <li><a href="#">Steam | @steam</a></li>
+                <li><a href="#">Meats | @Meats</a></li>
             </ul>
         </div>
         <div class="footer-social">
             <ul>
-                <li><a href="#"><img src="twitter_icon.png" alt="Twitter"></a></li>
-                <li><a href="#"><img src="facebook_icon.png" alt="Facebook"></a></li>
-                <li><a href="#"><img src="instagram_icon.png" alt="Instagram"></a></li>
-                <li><a href="#"><img src="youtube_icon.png" alt="YouTube"></a></li>
+                <li><a href="#"><img src="images/twitter_icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/facebook_icon.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/instagram_icon.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="{% static 'images/youtube.png' %}" alt="YouTube"></a></li>
             </ul>
         </div>
     </footer>

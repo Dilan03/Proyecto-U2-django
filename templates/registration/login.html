@@ -2,15 +2,14 @@
 {% extends "aplication/base.html" %}
 {% load static %}
 {% block body_block %}
-    <div>
-        <h1>Inicia sesión para poder ver las opiniones</h1>
+    <div class="login">
+        <h1>Inicia sesión</h1>
         <form action="" method="post">
             {% csrf_token %}
             <input type="text" name="username" id="" placeholder="Nombre de usuario">
-            <br>
             <input type="password" name="password" id="" placeholder="Contraseña">
-            <br>
             <button type="submit">Iniciar sesión</button>
         </form>
+    </div>
 {% endblock %}
 </html>

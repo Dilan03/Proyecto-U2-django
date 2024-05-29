@@ -13,6 +13,7 @@ class HomeView(TemplateView):
         categoria = Categoria.objects.get(nombre="question")
         context['categoria'] = categoria
         context['videojuegos'] = Videojuego.objects.filter(categoria=categoria.id)
+        context['imagen'] = Videojuego.objects.filter(categoria=categoria.id).first().imagen.url
         return context
 
 #Crear un formulario para mostrar
@@ -38,6 +39,9 @@ def registro(request):
 
 class AboutView(TemplateView):
     template_name = "aplication/about.html"
+
+class LoginView(TemplateView):
+    template_name = "aplication/registration/login.html"
 
 @login_required
 def mostrar_opiniones(request):

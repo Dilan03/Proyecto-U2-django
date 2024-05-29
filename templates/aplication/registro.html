@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 {% extends "aplication/base.html" %}
 {% block body_block %}
-    <h1>Opiniones de la página</h1>
+<div class="opiniones">
+    <h1>Registra tu opinion de la pagina</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" class="btn btn-primary" value="Enviar"/>
     </form>
+</div>
 {% endblock %}
